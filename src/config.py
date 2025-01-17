@@ -1,9 +1,14 @@
-PRODUCTS_API_URL = "https://fakestoreapi.com/products"
-CARTS_API_URL = "https://fakestoreapi.com/carts"
-USERS_API_URL = "https://fakestoreapi.com/users"
+from dotenv import load_dotenv
+import os
 
-DB_NAME = "sales"
-DB_USER = "postgres"
-DB_PASSWORD = "sohail@123"
-DB_HOST = "localhost"  
-DB_PORT = "5432"  
+load_dotenv()
+# Load the .env file
+PRODUCTS_API_URL = os.getenv('PRODUCTS_API_URL')
+CARTS_API_URL = os.getenv('CARTS_API_URL')
+USERS_API_URL = os.getenv('USERS_API_URL')
+
+DB_NAME = os.getenv('DB_NAME')
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT') 
