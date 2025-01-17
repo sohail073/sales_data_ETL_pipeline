@@ -1,0 +1,14 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore environment files
+.env
+
+
+# Ignore the ETL_PIPELINE directory
+ETL_PIPELINE/
+
+# Ignore any other sensitive files
+# *.env
+# *.key
+# *.pem
