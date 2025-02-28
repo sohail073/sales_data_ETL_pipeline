@@ -31,14 +31,6 @@ def transform_data_products(raw_data_products):
         # Clean and preprocess the 'category' column
         df["category"] = df["category"].str.lower().str.strip()
 
-        # Calculate sentiment polarity for the 'description' column
-        df["description_sentiment"] = df["description"].apply(lambda x: TextBlob(x).sentiment.polarity)
-
-        # Categorize sentiment based on polarity
-        df["sentiment_category"] = df["description_sentiment"].apply(
-            lambda x: "Positive" if x > 0 else "Negative" if x < 0 else "Neutral"
-        )
-
         return df
 
     # Call the clean_and_preprocess_data function

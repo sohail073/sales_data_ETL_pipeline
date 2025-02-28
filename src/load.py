@@ -13,10 +13,10 @@ def load_data_products(product_df):
     
     for index, row in product_df.iterrows():
         cursor.execute("""
-            INSERT INTO products (product_id, title, price, description, category, rating_rate, rating_count, description_sentiment, sentiment_category)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (product_id) DO NOTHING  -- Change 'id' to 'product_id'
-        """, (row['id'], row['title'], row['price'], row['description'], row['category'], row['rating_rate'], row['rating_count'], row['description_sentiment'], row['sentiment_category']))
+            INSERT INTO products (product_id, title, price, description, category, rating_rate, rating_count)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            ON CONFLICT (product_id) DO NOTHING
+        """, (row['id'], row['title'], row['price'], row['description'], row['category'], row['rating_rate'], row['rating_count']))
     
     conn.commit()
     cursor.close()
