@@ -27,10 +27,10 @@ Airflow project/
 The project follows an ETL pipeline to process data from external APIs and load it into a PostgreSQL database. The main steps are:
 
 1. **Extraction**: Fetch data from APIs for products, carts, and users.
-2. **Transformation**: Clean and preprocess the data, including sentiment analysis on product descriptions.
+2. **Transformation**: Clean and preprocess the data.
 3. **Loading**: Insert the transformed data into the respective PostgreSQL tables.
 
-The project uses Python libraries such as `pandas` for data manipulation, `requests` for API calls, `TextBlob` for sentiment analysis, and `psycopg2` for database interactions. Environment variables are managed using `python-dotenv`.
+The project uses Python libraries such as `pandas` for data manipulation, `requests` for API calls, and `psycopg2` for database interactions. Environment variables are managed using `python-dotenv`.
 
 ## Setup
 
@@ -43,4 +43,3 @@ The project uses Python libraries such as `pandas` for data manipulation, `reque
 ## Acknowledgements
 
 - [Fake Store API](https://fakestoreapi.com/) for providing the sample data.
-- [TextBlob](https://textblob.readthedocs.io/en/dev/) for sentiment analysis.
