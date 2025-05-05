@@ -5,7 +5,7 @@ This project is designed to extract, transform, and load (ETL) data from various
 ## Project Structure
 
 ```
-Airflow project/
+sales_data_ETL_pipeline/
 │
 ├── src/
 │   ├── main.py
